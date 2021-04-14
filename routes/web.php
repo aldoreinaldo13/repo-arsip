@@ -23,4 +23,4 @@ route::post('/arsip/proses',[DataarsipController::class, 'proses']);
 route::get('/arsip/edit/{id}',[DataarsipController::class,'edit']);
 route::post('/arsip/update', [DataarsipController::class,'update']);
 route::get('/arsip/hapus/{id}',[DataarsipController::class, 'hapus']);
-route::get('/arsip/cari',[DataarsipController::class, 'carii']);
+route::get('/arsip/cari',[DataarsipController::class, 'cari']);
