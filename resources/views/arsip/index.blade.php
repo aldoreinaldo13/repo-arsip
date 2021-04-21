@@ -8,6 +8,7 @@ Dashboard
     <div class="section-header">
       <h1>DATA ARSIP</h1>    
     </div>
+    <a href="/arsip/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a>
 
   <div class="section-body">
           <div class="card">

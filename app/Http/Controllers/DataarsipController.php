@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\Models\Data_arsip;
+use App\Exports\Data_ArsipExport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;
  
 class DataarsipController extends Controller
 {
@@ -93,5 +96,15 @@ class DataarsipController extends Controller
     		// mengirim data pegawai ke view index
 		return view('arsip.index',['data_arsip' => $pencarian]);
  
+	}
+    // public function export_excel(Request $request)
+    // {
+    //     return [
+    //         (new Data_ArsipExport)->withHeadings(),
+    //     ];
+    // }
+    public function export_excel()
+	{
+		return Excel::download(new Data_ArsipExport, 'data_arsip.xlsx');
 	}
 }

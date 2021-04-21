@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 route::get('/arsip',[DataarsipController::class, 'index']);
+Route::get('/arsip/export_excel', [DataarsipController::class, 'export_excel']);
 route::get('/arsip/tambah', [DataarsipController::class, 'tambah']);
 route::post('/arsip/proses',[DataarsipController::class, 'proses']);
 route::get('/arsip/edit/{id}',[DataarsipController::class,'edit']);
