@@ -14,7 +14,7 @@ use App\Http\Controllers\DataarsipController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
 route::get('/arsip',[DataarsipController::class, 'index']);
@@ -25,3 +25,10 @@ route::get('/arsip/edit/{id}',[DataarsipController::class,'edit']);
 route::post('/arsip/update', [DataarsipController::class,'update']);
 route::get('/arsip/hapus/{id}',[DataarsipController::class, 'hapus']);
 route::get('/arsip/cari',[DataarsipController::class, 'cari']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
